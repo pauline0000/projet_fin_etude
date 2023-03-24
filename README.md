@@ -1,5 +1,6 @@
-# projet_fin_etude
-◉ Introduction 
+# Projet de fin d'études
+
+## Introduction 
 
 Dans le cadre de notre master cybersécurité au sein de Sup de Vinci Paris, il nous a été demander de rendre notre projet de fin d’étude qui portait sur l’automatisation d’actions d’un analyste Red Team. 
 Il a également été demandé de rendre le code source documenter et aussi d’un rapport complet (comment il s’utilise).
@@ -15,7 +16,7 @@ Nous allons alors commencer par rappeler qu’elles sont les actions d’un anal
 
 
 
-◉ Rappel du contexte : actions d’un analyse Red Team
+## **Rappel du contexte : actions d’un analyse Red Team**
 
 Il est important de rappeler ce qu’est une Red Team et qu’elles sont les actions d’un analyste au sein de celle-ci. 
 
@@ -34,14 +35,14 @@ Enfin, l'analyste de la Red Team prépare un rapport d'analyse détaillant les v
 
 
 
-◉ 1 - Automatisation d’un test d’intrusion
+# 1 - Automatisation d’un test d’intrusion
 
-1.1 - Reconnaissance 
+## 1.1 - Reconnaissance 
 
 Pour automatiser un test d’intrusion j’ai choisi principalement des outils cités dans la certification CEH. 
 La première étape consiste à faire de la reconnaissance. Cette étape consiste à collecter des informations sur les systèmes cibles, y compris les adresses IP, les noms d'hôtes, les services en cours d'exécution, les applications web, les pare-feu, etc. Cette étape peut être effectuée à l'aide d'outils tels que Nmap, reconnaissance DNS, recherches sur les réseaux sociaux.
 
-1.1.1 - Nmap
+### 1.1.1 - Nmap
 
 Pour commencer la reconnaissance j’ai décidé de faire un script nmap qui permet de scanner les ports qui sont ouverts et notamment à travers le biais d’un affichage de services importants. 
 Pour rappel nmap est un outil de reconnaissance et de scan de port utilisé pour découvrir les hôtes et les services sur un réseau. 
@@ -60,7 +61,7 @@ Explication du code pour le script nmap -
 
 6	 	La liste des ports à afficher est stockée dans la variable port_list. Si le port est ouvert pour le protocole en cours, le code affiche le numéro de port et son état. J’ai choisi de prendre les ports les plus courants. 
 
-1.1.2 - GRecon
+### 1.1.2 - GRecon
 
 Ensuite, dans l’étape de la reconnaissance il est également important de recueillir des informations au niveau des sous domaines, des pages d’inscriptions, etc. J’ai donc utilisé de choisir l’outil GRecon qui permet de recueillir toutes ces informations nécessaires à la reconnaissance. 
 Pour rappel GRecon est un outil python simple qui automatise le processus de Google Based Redon AKA Google Dorking. Grâce à cet outil on peut trouver : des sous-domaines, des sous-sous-domaines, des pages d’incription/de connexion, des listes de répertoires, des documents exposés (pdf, xls, docx…), des entrées WordPress, également des collages de sites (enregistrements à patsebin, Ghostbin...)
@@ -74,7 +75,7 @@ J’ai ensuite fait des tests pour voir si le script grecon.py fonctionnait bien
 Dans le menu final, je l’ai rajouté afin qu’il s’exécute avec toutes les options. C’est avec l’instruction os.system que j’ai pu le faire exécuter (voir partie ). Cependant, j’ai eu quelques soucis, je devais mettre tous les fichiers téléchargés sur GitHub dans le répertoire où se trouvait mon script du menu final. 
  
 
-1.1.3 - Sherlock
+### 1.1.3 - Sherlock
 
  
 
@@ -85,7 +86,7 @@ J’ai effectué les mêmes étapes que pour l’outil GRecon. J’ai cloné l�
  
 Dans le menu final, j’ai codé pour faire en sorte que l’utilisateur puisse entrer un nom d’utilisateur et que ensuite l’outil Sherlock se lance en fonction de cette demande. 
 
-1.2 - Scan de port  
+## 1.2 - Scan de port  
 
 Cette étape consiste à utiliser plusieurs outils de scan de ports pour identifier les ports ouverts sur les systèmes cibles. Les ports ouverts peuvent indiquer les services en cours d'exécution sur le système, ce qui peut aider à identifier les vulnérabilités potentielles. 
 
@@ -93,7 +94,7 @@ Ici, nous allons utiliser l’outil unicornscan. Unicornscan est un outil de sca
 
 Dans mon script j’ai utilisé plusieurs commandes lier à l’outil pour avoir une meilleure verbosité au niveau des résultats de scan de ports. 
 
-Explication du script avec Unicornscan -
+## ◉ Explication du script avec Unicornscan -
 
 
 
@@ -113,7 +114,7 @@ Analyse des résultats et exploitation : Cette étape consiste à analyser les r
 
                                  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-◉ 2 - Scrapping des dernières vulnérabilités critiques up-to-date
+ # 2 - Scrapping des dernières vulnérabilités critiques up-to-date
 
 C’est important pour un analyse Red team d’automatiser le scrapping des dernières vulnérabilités critiques up-to-date, car ça lui permet de gagner du temps. De plus, cela permet d’avoir les dernières vulnérabilités mises à jour en temps réel. 
 
