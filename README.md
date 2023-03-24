@@ -1,5 +1,5 @@
 # projet_fin_etude
-Introduction 
+◉ Introduction 
 
 Dans le cadre de notre master cybersécurité au sein de Sup de Vinci Paris, il nous a été demander de rendre notre projet de fin d’étude qui portait sur l’automatisation d’actions d’un analyste Red Team. 
 Il a également été demandé de rendre le code source documenter et aussi d’un rapport complet (comment il s’utilise).
@@ -15,19 +15,7 @@ Nous allons alors commencer par rappeler qu’elles sont les actions d’un anal
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Rappel du contexte : actions d’un analyse Red Team
+◉ Rappel du contexte : actions d’un analyse Red Team
 
 Il est important de rappeler ce qu’est une Red Team et qu’elles sont les actions d’un analyste au sein de celle-ci. 
 
@@ -46,17 +34,13 @@ Enfin, l'analyste de la Red Team prépare un rapport d'analyse détaillant les v
 
 
 
-
-
-
-
-
-1 - Automatisation d’un test d’intrusion
+◉ 1 - Automatisation d’un test d’intrusion
 
 1.1 - Reconnaissance 
 
 Pour automatiser un test d’intrusion j’ai choisi principalement des outils cités dans la certification CEH. 
 La première étape consiste à faire de la reconnaissance. Cette étape consiste à collecter des informations sur les systèmes cibles, y compris les adresses IP, les noms d'hôtes, les services en cours d'exécution, les applications web, les pare-feu, etc. Cette étape peut être effectuée à l'aide d'outils tels que Nmap, reconnaissance DNS, recherches sur les réseaux sociaux.
+
 1.1.1 - Nmap
 
 Pour commencer la reconnaissance j’ai décidé de faire un script nmap qui permet de scanner les ports qui sont ouverts et notamment à travers le biais d’un affichage de services importants. 
@@ -90,7 +74,7 @@ J’ai ensuite fait des tests pour voir si le script grecon.py fonctionnait bien
 Dans le menu final, je l’ai rajouté afin qu’il s’exécute avec toutes les options. C’est avec l’instruction os.system que j’ai pu le faire exécuter (voir partie ). Cependant, j’ai eu quelques soucis, je devais mettre tous les fichiers téléchargés sur GitHub dans le répertoire où se trouvait mon script du menu final. 
  
 
-1.1.3 – Sherlock
+1.1.3 - Sherlock
 
  
 
@@ -101,7 +85,7 @@ J’ai effectué les mêmes étapes que pour l’outil GRecon. J’ai cloné l�
  
 Dans le menu final, j’ai codé pour faire en sorte que l’utilisateur puisse entrer un nom d’utilisateur et que ensuite l’outil Sherlock se lance en fonction de cette demande. 
 
-1.2 – Scan de port  
+1.2 - Scan de port  
 
 Cette étape consiste à utiliser plusieurs outils de scan de ports pour identifier les ports ouverts sur les systèmes cibles. Les ports ouverts peuvent indiquer les services en cours d'exécution sur le système, ce qui peut aider à identifier les vulnérabilités potentielles. 
 
@@ -127,9 +111,10 @@ Scan de vulnérabilité : Cette étape consiste à utiliser des outils de scan d
 
 Analyse des résultats et exploitation : Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Cela peut être fait en utilisant des outils d'exploitation tels que Metasploit, Core Impact, etc.
 
-2 – Scrapping des dernières vulnérabilités critiques up-to-date
+◉ 2 - Scrapping des dernières vulnérabilités critiques up-to-date
 
 C’est important pour un analyse Red team d’automatiser le scrapping des dernières vulnérabilités critiques up-to-date, car ça lui permet de gagner du temps. De plus, cela permet d’avoir les dernières vulnérabilités mises à jour en temps réel. 
+
 C’est pour cela que j’ai choisi d’intégrer un script en python dans mon menu principal. Il permet d’afficher grâce à l’API du site NVD toutes les dernières vulnérabilités à partir du mois en cours (et à jour) et affiche des informations sur chacune d’entre elles puis exclusivement celles qui ont un impact de type CRITICAL ou HIGH. 
 De plus, j’ai ajouté dans mon script nist5.py, une partie qui permet d’envoyer à l’adresse mail que l’utilisateur à rempli, tous les résultats.  
 
@@ -223,9 +208,15 @@ except Exception as e:
 
 
 
+                                 -------------------------------------------------------------------------------------
 
-4 – Conclusion
+4 - Conclusion
 
+
+
+
+
+                                 -------------------------------------------------------------------------------------
 
 5 - Sources des sites utilisés
 
