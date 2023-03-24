@@ -208,19 +208,16 @@ except Exception as e:
 ```
 
 
+                                
 
-
-                                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-4 - Conclusion
-
+# 4 - Conclusion
 
 
 
 
-                                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-5 - Sources des sites utilisés
+
+# 5 - Sources des sites utilisés
 
 Code beautity - https://codebeautify.org/python-formatter-beautifier# : pour mon code en python (notamment pour les indentations et les espaces)
 
