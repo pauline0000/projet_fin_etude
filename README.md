@@ -1,4 +1,5 @@
 # Projet de fin d'études
+rédigé par Pauline STEPHAN - Classe Master Cybersécurité A
 
 ## Sommaire 
 - [Introduction](#introduction)
