@@ -1,5 +1,5 @@
 # Projet de fin d'études
-rédigé par Pauline STEPHAN - Classe Master Cybersécurité A
+rédigé par Pauline STEPHAN - Classe Master Cybersécurité A - Sup de Vinci
 
 ## Sommaire 
 - [Introduction](#introduction)
