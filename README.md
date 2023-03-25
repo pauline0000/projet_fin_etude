@@ -292,6 +292,7 @@ Explications du code pour le scraping de vulnérabilités critiques -
 
 # Points d'améliorations
 
+- Avoir une adresse IP ou une URL cible de test pour simuler nos scripts légalement 
 
 
 # Sources des sites utilisés
