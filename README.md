@@ -117,6 +117,7 @@ Dans mon script j’ai utilisé plusieurs commandes lier à l’outil pour avoir
 ## 1.3 - Enumération 
 
 L'étape de l'énumération consiste à recueillir des informations plus détaillées sur les services et les applications en cours d'exécution sur les systèmes cibles. Cela peut être fait en utilisant des outils tels que NetBIOS, SNMP, LDAP, SMB.
+
 Pré-requis : enum4linux, fierce
 
 Code : 
