@@ -211,10 +211,11 @@ for command in commands:
 Le scan de vulnérabilité est une étape importante dans le cadre d'une opération de Red Team. En effet, le but de la Red Team est de tester la sécurité d'un système, d'une infrastructure ou d'une application en imitant les techniques et les tactiques d'un attaquant réel.
 Pour cela j'ai utilisé un outil qui était déja présent sur la VM Kali Linux. 
 
-Il s'agit de WPScan. WPScan est un outil open-source de test de sécurité pour WordPress. Il permet de scanner des sites WordPress pour détecter les vulnérabilités et les failles de sécurité connues.
+Il s'agit de WPScan. WPScan est un outil open-source de test de sécurité pour WordPress. Il permet de scanner des sites WordPress pour détecter les vulnérabilités et les failles de sécurité connues. De plus, j'ai ajouté dans ce script que si ça ne correspondait pas à un site wordpress, il fallait executer la commande nikto -h sur une url cible. 
 
 Au début, j'étais partie sur l'automatisation de Nessus avec son API. Seulement, je n'ai pas réussi à configurer. 
 
+### Explication du code -
 ```
 import subprocess
 
