@@ -114,7 +114,35 @@ Dans mon script j’ai utilisé plusieurs commandes lier à l’outil pour avoir
 
 
 
-Enumération : Cette étape consiste à recueillir des informations plus détaillées sur les services et les applications en cours d'exécution sur les systèmes cibles. Cela peut être fait en utilisant des outils tels que NetBIOS, SNMP, LDAP, SMB, etc.
+## 1.3 - Enumération 
+
+L'étape de l'énumération consiste à recueillir des informations plus détaillées sur les services et les applications en cours d'exécution sur les systèmes cibles. Cela peut être fait en utilisant des outils tels que NetBIOS, SNMP, LDAP, SMB.
+Pré-requis : enum4linux, fierce
+
+Code : 
+```
+import os
+
+# Demander à l'utilisateur le nom de domaine ou l'adresse IP cible
+target = input("Entrez le nom de domaine ou l'adresse IP cible : ")
+
+# Exécuter les commandes de reconnaissance sur la cible
+print(f"Résultats de la reconnaissance pour {target} :")
+os.system(f"whois {target}")
+os.system(f"nslookup {target}")
+os.system(f"nslookup -query=MX {target}")
+os.system(f"dig {target}")
+os.system(f"dig -t MX {target}")
+os.system(f"nmap -sn {target}")
+os.system(f"nmap -p 21,22,25,80,110,143,161,443 {target}")
+os.system(f"nmap -sV {target}")
+os.system(f"nmap -O {target}")
+os.system(f"nmap -sU -p 123 --open {target}")
+os.system(f"nmap -p 389 {target} && echo 'Le port LDAP est ouvert' || echo 'Le port LDAP est fermé'")
+os.system(f"enum4linux -a {target}")
+os.system(f"fierce --domain {target}")
+```
+
 
 Scan de vulnérabilité : Cette étape consiste à utiliser des outils de scan de vulnérabilités pour détecter les vulnérabilités sur les systèmes cibles. Les outils tels que Nessus, OpenVAS, Nexpose peuvent être utilisés pour effectuer un scan de vulnérabilité.
 
