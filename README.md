@@ -175,7 +175,12 @@ os.system(f"fierce --domain {target}")
 
 ## 1.4 - Scan de vulnérabilité
 
-Cette étape consiste à utiliser des outils de scan de vulnérabilités pour détecter les vulnérabilités sur les systèmes cibles. Les outils tels que Nessus, OpenVAS, Nexpose peuvent être utilisés pour effectuer un scan de vulnérabilité.
+Le scan de vulnérabilité est une étape importante dans le cadre d'une opération de Red Team. En effet, le but de la Red Team est de tester la sécurité d'un système, d'une infrastructure ou d'une application en imitant les techniques et les tactiques d'un attaquant réel.
+Pour cela j'ai utilisé un outil qui était déja présent sur la VM Kali Linux. Il s'agit de WPScan. 
+
+
+
+
 
 ## 1.5 - Analyse des résultats et exploitation 
 
@@ -188,7 +193,8 @@ Cette étape consiste à analyser les résultats du scan de vulnérabilité pour
 C’est important pour un analyse Red team d’automatiser le scrapping des dernières vulnérabilités critiques up-to-date, car ça lui permet de gagner du temps. De plus, cela permet d’avoir les dernières vulnérabilités mises à jour en temps réel. Le scraping (ou scrapping) est une technique informatique qui consiste à extraire des données d'un site web en les récupérant de manière automatique.
 
 C’est pour cela que j’ai choisi d’intégrer un script en python dans mon menu principal. Il permet d’afficher grâce à l’API du site NVD toutes les dernières vulnérabilités à partir du mois en cours (et à jour) et affiche des informations sur chacune d’entre elles puis exclusivement celles qui ont un impact de type CRITICAL ou HIGH. 
-De plus, j’ai ajouté dans mon script nist6.py, une partie qui permet d’envoyer à l’adresse mail que l’utilisateur à rempli, tous les résultats.  
+J'ai donc ajouté dans mon script nist6.py dans mon menu principal. J'ai notamment ajouté une partie qui permet d’envoyer les résultats à l’adresse mail que l’utilisateur à rempli, et que si il y a pas de vulnérabilités critiques à jour, rien ne lui est envoyé. 
+Je tiens à préciser qu'il m'a fallait faire plus de 6 versions de scripts pour avoir un script python fonctionnel. 
 
 ```
 import requests
