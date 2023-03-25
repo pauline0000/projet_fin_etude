@@ -6,6 +6,7 @@
 - [1 - Automatisation d’un test d’intrusion](#1---automatisation-dun-test-dintrusion)
 - [2 - Scrapping des dernières vulnérabilités critiques up-to-date](#2---scrapping-des-dernières-vulnérabilités-critiques-up-to-date)
 - [Conclusion](#conclusion)
+- [Points d'améliorations](#points-daméliorations)
 - [Sources des sites utilisés](#sources-des-sites-utilisés)
 
 ## Introduction 
@@ -282,7 +283,7 @@ except Exception as e:
 # Conclusion
 
 
-
+# Points d'améliorations
 
 
 
