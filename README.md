@@ -381,6 +381,7 @@ else:
 
 # Conclusion
 
+Pour répondre à la problématique, je dirais que c'est important d’automatiser des actions d’un analyse Red Team, car cela fait gagner du temps à l'analyste. De plus, cela permet d'avoir des données à jour et temps réel notamment pour les dernières vulnérabilités critiques. 
 
 # Points d'améliorations
 
