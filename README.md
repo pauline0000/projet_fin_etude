@@ -143,10 +143,13 @@ os.system(f"enum4linux -a {target}")
 os.system(f"fierce --domain {target}")
 ```
 
+## 1.4 - Scan de vulnérabilité
 
-Scan de vulnérabilité : Cette étape consiste à utiliser des outils de scan de vulnérabilités pour détecter les vulnérabilités sur les systèmes cibles. Les outils tels que Nessus, OpenVAS, Nexpose peuvent être utilisés pour effectuer un scan de vulnérabilité.
+Cette étape consiste à utiliser des outils de scan de vulnérabilités pour détecter les vulnérabilités sur les systèmes cibles. Les outils tels que Nessus, OpenVAS, Nexpose peuvent être utilisés pour effectuer un scan de vulnérabilité.
 
-Analyse des résultats et exploitation : Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Cela peut être fait en utilisant des outils d'exploitation tels que Metasploit, Core Impact, etc.
+## 1.5 - Analyse des résultats et exploitation 
+
+Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Cela peut être fait en utilisant des outils d'exploitation tels que Metasploit, Core Impact, etc.
 
                                  
                                  
