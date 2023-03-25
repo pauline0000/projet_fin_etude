@@ -209,6 +209,8 @@ for command in commands:
 - Demande d'abord à l'utilisateur l'adresse cible sur laquelle les commandes seront exécutées
 - Exécute chaque commande de la liste *"commands"* en utilisant le module *"subprocess"* de Python
 - La sortie est capturée à l'aide de l'option *"capture_output=True"* et retournée sous forme de texte à l'aide de l'option *"text=True"* dans la méthode *"subprocess.run"*
+- Les commandes sont utilisées pour effectuer différentes tâches de reconnaissance et de découverte de services, telles que la récupération d'informations WHOIS, la résolution DNS, la numérisation de ports et la recherche d'informations sur les services disponibles sur la cible
+- Une boucle "for" exécute chaque commande dans la liste et stocke le résultat dans une variable "result"
 
 ## 1.4 - Scan de vulnérabilité
 
