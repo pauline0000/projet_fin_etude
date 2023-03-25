@@ -386,6 +386,8 @@ Pour répondre à la problématique, je dirais que c'est important d’automatis
 # Points d'améliorations
 
 - Avoir une adresse IP ou une URL cible de test pour simuler nos scripts légalement 
+- Améliorer la partie test d'intrusion, notamment sur les vulnérabilités trouvés, établir un impact en fonction de ce qui est trouvé
+- 
 
 
 # Sources des sites utilisés
