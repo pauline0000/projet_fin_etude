@@ -220,7 +220,8 @@ data = json.loads(response.text)
 # Créer un string pour stocker les informations sur les vulnérabilités
 vulnerabilities_info = ""
 
-# Afficher les informations sur chaque vulnérabilité
+# Afficher les informations sur chaque vulnérabilité ayant un impact assigné
+vulnerabilities_found = False
 for result in data['result']['CVE_Items']:
     # Récupérer les informations sur l'impact
     impact = result['impact']
@@ -231,6 +232,7 @@ for result in data['result']['CVE_Items']:
 
         # Vérifier si l'impact est critique ou élevé
         if severity in ['CRITICAL', 'HIGH']:
+            vulnerabilities_found = True
             # Récupérer les informations sur la vulnérabilité
             cve_id = result['cve']['CVE_data_meta']['ID']
             description = result['cve']['description']['description_data'][0]['value']
@@ -250,31 +252,36 @@ for result in data['result']['CVE_Items']:
         # Afficher un message d'erreur si la clé 'baseMetricV3' n'existe pas
         print(f"La vulnérabilité {result['cve']['CVE_data_meta']['ID']} n'a pas d'impact assigné.")
 
-# Demander l'email de l'utilisateur
-email = input("Entrez votre adresse e-mail : ")
+# Si aucune vulnérabilité avec impact assigné n'a été trouvée, afficher un message à l'utilisateur
+if not vulnerabilities_found:
+    print("Il n'y a pas de vulnérabilités critiques ou élevées aujourd'hui.")
 
-# Envoyer les résultats par email
-gmail_user = "pauline.stephan5@gmail.com"
-gmail_password = "nuxstodowonobbcv"
+# Demander l'email de l'utilisateur si des vulnérabilités ont été trouvées
+else:
+    email = input("Entrez votre adresse e-mail : ")
 
-msg = MIMEMultipart()
-msg['From'] = gmail_user
-msg['To'] = email
-msg['Subject'] = "Rapport des vulnérabilités récentes"
+    # Envoyer les résultats par email
+    gmail_user = "pauline.stephan5@gmail.com"
+    gmail_password = "nuxstodowonobbcv"
 
-body = vulnerabilities_info
-msg.attach(MIMEText(body, 'plain'))
+    msg = MIMEMultipart()
+    msg['From'] = gmail_user
+    msg['To'] = email
+    msg['Subject'] = "Rapport des vulnérabilités récentes"
 
-try:
-    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.ehlo()
-    server.login(gmail_user, gmail_password)
-    text = msg.as_string()
-    server.sendmail(gmail_user, email, text)
-    server.quit()
-    print(f"Les informations sur les vulnérabilités ont été envoyées avec succès à {email}.")
-except Exception as e:
-    print(f"Une erreur s'est produite lors de l'envoi de l'email : {str(e)}")
+    body = vulnerabilities_info
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.ehlo()
+        server.login(gmail_user, gmail_password)
+        text = msg.as_string()
+        server.sendmail(gmail_user, email, text)
+        server.quit()
+        print(f"Les informations sur les vulnérabilités ont été envoyées avec succès à {email}.")
+    except Exception as e:
+        print(f"Une erreur s'est produite lors de l'envoi de l'email : {str(e)}")
 ```
 
 
