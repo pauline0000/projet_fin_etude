@@ -131,7 +131,7 @@ Ici, nous allons utiliser l’outil unicornscan. Unicornscan est un outil de sca
 
 Dans mon script j’ai utilisé plusieurs commandes lier à l’outil pour avoir une meilleure verbosité au niveau des résultats de scan de ports. 
 
-## ◉ Explication du script avec Unicornscan -
+## Explication du script avec Unicornscan -
 
 
 
@@ -283,7 +283,7 @@ else:
     except Exception as e:
         print(f"Une erreur s'est produite lors de l'envoi de l'email : {str(e)}")
 ```
-Explications du code pour le scraping de vulnérabilités critiques - 
+## Explications du code pour le scraping de vulnérabilités critiques - 
 
                                 
 
