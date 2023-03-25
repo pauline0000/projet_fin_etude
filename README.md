@@ -131,11 +131,37 @@ Ici, nous allons utiliser l’outil unicornscan. Unicornscan est un outil de sca
 
 Dans mon script j’ai utilisé plusieurs commandes lier à l’outil pour avoir une meilleure verbosité au niveau des résultats de scan de ports. 
 
-## Explication du script avec Unicornscan -
+
+### Explication du script avec Unicornscan -
+
+```
+import os
+
+def unicorn_scan():
+    # Demander à l'utilisateur l'adresse IP à scanner
+    ip_address = input("Entrez l'adresse IP à scanner : ")
+
+    # Commande Unicornscan pour scanner les ports UDP et TCP
+    command = f"sudo unicornscan -mU -mT -p 1-1000 {ip_address}:a"
 
 
+    # Exécuter la commande et récupérer les résultats
+    results_udp_tcp = os.popen(command).read()
 
 
+    # Afficher les résultats de chaque scan
+    print("Résultats du scan UDP et TCP :")
+    print(results_udp_tcp)
+
+
+# Exemple d'utilisation du script
+unicorn_scan()
+```
+
+- Demande à l'utilisateur de saisir une adresse IP, puis utilise la commande Unicornscan pour scanner les ports UDP et TCP de cette adresse IP
+- La commande Unicornscan est générée en utilisant la fonction *f-string* pour remplacer l'adresse IP dans la commande
+- Utilise les options *-mU* et *-mT* pour spécifier que les ports UDP et TCP doivent être scannés + l'option *-p* pour spécifier la plage de ports à scanner (ici, les ports de 1 à 1000)
+- Les résultats sont stockés dans une variable *results_udp_tcp* à l'aide de la fonction *os.popen()*, qui exécute la commande Unicornscan et retourne
 
 
 
