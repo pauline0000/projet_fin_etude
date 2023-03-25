@@ -170,12 +170,12 @@ unicorn_scan()
 
 
 ## 1.3 - Enumération 
+L'énumération en cybersécurité est le processus de collecte d'informations sur une cible spécifique, comme un système informatique, un réseau, une application, un site web ou même une organisation, dans le but de préparer une attaque ou de vérifier la sécurité de la cible.
 
-L'étape de l'énumération consiste à recueillir des informations plus détaillées sur les services et les applications en cours d'exécution sur les systèmes cibles. Cela peut être fait en utilisant des outils tels que NetBIOS, SNMP, LDAP, SMB.
 
 Pré-requis : enum4linux, fierce
 
-Code : 
+### Explication du code -  
 ```
 import os
 
@@ -206,7 +206,7 @@ Pour cela j'ai utilisé un outil qui était déja présent sur la VM Kali Linux.
 
 Il s'agit de WPScan. WPScan est un outil open-source de test de sécurité pour WordPress. Il permet de scanner des sites WordPress pour détecter les vulnérabilités et les failles de sécurité connues.
 
-
+Au début, j'étais partie sur l'automatisation de Nessus avec son API. Seulement, je n'ai pas réussi à configurer. 
 
 
 
