@@ -176,7 +176,9 @@ os.system(f"fierce --domain {target}")
 ## 1.4 - Scan de vulnérabilité
 
 Le scan de vulnérabilité est une étape importante dans le cadre d'une opération de Red Team. En effet, le but de la Red Team est de tester la sécurité d'un système, d'une infrastructure ou d'une application en imitant les techniques et les tactiques d'un attaquant réel.
-Pour cela j'ai utilisé un outil qui était déja présent sur la VM Kali Linux. Il s'agit de WPScan. 
+Pour cela j'ai utilisé un outil qui était déja présent sur la VM Kali Linux. 
+
+Il s'agit de WPScan. WPScan est un outil open-source de test de sécurité pour WordPress. Il permet de scanner des sites WordPress pour détecter les vulnérabilités et les failles de sécurité connues.
 
 
 
