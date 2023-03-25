@@ -259,10 +259,11 @@ if not vulnerabilities_found:
 else:
     email = input("Entrez votre adresse e-mail : ")
 
-    # Envoyer les résultats par email
+    # Envoyer les résultats par email (expéditeur)
     gmail_user = "pauline.stephan5@gmail.com"
     gmail_password = "nuxstodowonobbcv"
-
+    
+    #Objet MIMEMultipart qui permet de construire un message e-mail contenant un texte brut
     msg = MIMEMultipart()
     msg['From'] = gmail_user
     msg['To'] = email
@@ -271,18 +272,22 @@ else:
     body = vulnerabilities_info
     msg.attach(MIMEText(body, 'plain'))
 
+    #Envoi du message e-mail
     try:
+        #Essaie d'abord de se connecter au serveur SMTP de Gmail en utilisant le port 465 et le protocole SSL
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         server.ehlo()
         server.login(gmail_user, gmail_password)
         text = msg.as_string()
+
+        #Envoie le message à l'aide de la méthode sendmail()
         server.sendmail(gmail_user, email, text)
         server.quit()
         print(f"Les informations sur les vulnérabilités ont été envoyées avec succès à {email}.")
     except Exception as e:
         print(f"Une erreur s'est produite lors de l'envoi de l'email : {str(e)}")
 ```
-## Explications détaillées du script pour récupérer les dernières vulnérabilités (à jour) par mail -
+## Précisions sur le script pour récupérer les dernières vulnérabilités (à jour) par mail -
 
 - requests : permet de faciliter les requêtes HTTP depuis Python, notamment pour accéder à des API en ligne.
 
