@@ -206,6 +206,10 @@ for command in commands:
     print(result.stdout)
 ```
 
+- Demande d'abord à l'utilisateur l'adresse cible sur laquelle les commandes seront exécutées
+- Exécute chaque commande de la liste *"commands"* en utilisant le module *"subprocess"* de Python
+- La sortie est capturée à l'aide de l'option *"capture_output=True"* et retournée sous forme de texte à l'aide de l'option *"text=True"* dans la méthode *"subprocess.run"*
+
 ## 1.4 - Scan de vulnérabilité
 
 Le scan de vulnérabilité est une étape importante dans le cadre d'une opération de Red Team. En effet, le but de la Red Team est de tester la sécurité d'un système, d'une infrastructure ou d'une application en imitant les techniques et les tactiques d'un attaquant réel.
