@@ -4,6 +4,9 @@ Sommaire
 - [Introduction](#introduction)
 - [Rappel du contexte : actions d’un analyse Red Team](#rappel-du-contexte--actions-dun-analyse-red-team)
 - [1 - Automatisation d’un test d’intrusion](#1---automatisation-dun-test-dintrusion)
+- [2 - Scrapping des dernières vulnérabilités critiques up-to-date](#2---scrapping-des-dernières-vulnérabilités-critiques-up-to-date)
+- [Conclusion](#conclusion)
+- [Sources des sites utilisés](#sources-des-sites-utilisés)
 
 ## Introduction 
 
@@ -216,14 +219,14 @@ except Exception as e:
 
                                 
 
-# 4 - Conclusion
+# Conclusion
 
 
 
 
 
 
-# 5 - Sources des sites utilisés
+# Sources des sites utilisés
 
 Code beautity - https://codebeautify.org/python-formatter-beautifier# : pour mon code en python (notamment pour les indentations et les espaces)
 
