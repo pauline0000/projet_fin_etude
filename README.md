@@ -191,7 +191,6 @@ C’est pour cela que j’ai choisi d’intégrer un script en python dans mon m
 De plus, j’ai ajouté dans mon script nist6.py, une partie qui permet d’envoyer à l’adresse mail que l’utilisateur à rempli, tous les résultats.  
 
 ```
-1️⃣
 import requests
 import json
 from datetime import datetime
@@ -199,7 +198,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-2️⃣
+
 # Obtenir la date actuelle et la convertir en format requis pour l'API NVD
 now = datetime.now()
 year = str(now.year)
@@ -285,20 +284,30 @@ else:
 ```
 ## Explications détaillées du script pour récupérer les dernières vulnérabilités (à jour) par mail -
 
-requests : permet de faciliter les requêtes HTTP depuis Python, notamment pour accéder à des API en ligne.
-json : permet de convertir des données JSON en objets Python, ou inversement.
-datetime : fournit des classes pour travailler avec des dates et des heures en Python, notamment pour obtenir la date actuelle.
-smtplib : permet d'envoyer des e-mails depuis Python en utilisant le protocole SMTP.
-email.mime.multipart : fournit des classes pour la création et la manipulation d'e-mails multiparts, qui peuvent inclure des pièces jointes et des parties de texte ou HTML.
-email.mime.text : fournit une classe pour la création de parties de texte pour les e-mails.
+- requests : permet de faciliter les requêtes HTTP depuis Python, notamment pour accéder à des API en ligne.
+
+- json : permet de convertir des données JSON en objets Python, ou inversement.
+
+- datetime : fournit des classes pour travailler avec des dates et des heures en Python, notamment pour obtenir la date actuelle.
+
+- smtplib : permet d'envoyer des e-mails depuis Python en utilisant le protocole SMTP.
+
+- email.mime.multipart : fournit des classes pour la création et la manipulation d'e-mails multiparts, qui peuvent inclure des pièces jointes et des parties de texte ou HTML.
+
+- email.mime.text : fournit une classe pour la création de parties de texte pour les e-mails.
                                 
 
-now = datetime.now() : crée un objet datetime représentant la date et l'heure actuelles.
-year = str(now.year) : convertit l'année en chaîne de caractères pour pouvoir l'utiliser dans la construction de la chaîne de date.
-month = str(now.month).zfill(2) : convertit le mois en chaîne de caractères, avec un zéro ajouté devant si nécessaire pour obtenir deux chiffres (par exemple, "03" pour mars).
-day = str(now.day).zfill(2) : convertit le jour en chaîne de caractères, avec un zéro ajouté devant si nécessaire pour obtenir deux chiffres (par exemple, "07" pour le 7ème jour du mois).
-start_date = f"{year}-{month}-01T00:00:00:000 UTC-00:00" : construit une chaîne de date pour le début du mois en cours, en utilisant l'année, le mois et le jour "01", ainsi qu'une heure, des minutes et des secondes de "00" et des millisecondes de "000". La chaîne est également complétée avec le fuseau horaire UTC.
-end_date = f"{year}-{month}-{day}T23:59:59:999 UTC-00:00" : construit une chaîne de date pour la fin du jour en cours, en utilisant l'année, le mois et le jour en cours, ainsi qu'une heure, des minutes et des secondes de "23", des millisecondes de "999" et le fuseau horaire UTC.
+- now = datetime.now() : crée un objet datetime représentant la date et l'heure actuelles.
+
+- year = str(now.year) : convertit l'année en chaîne de caractères pour pouvoir l'utiliser dans la construction de la chaîne de date.
+
+- month = str(now.month).zfill(2) : convertit le mois en chaîne de caractères, avec un zéro ajouté devant si nécessaire pour obtenir deux chiffres (par exemple, "03" pour mars).
+
+- day = str(now.day).zfill(2) : convertit le jour en chaîne de caractères, avec un zéro ajouté devant si nécessaire pour obtenir deux chiffres (par exemple, "07" pour le 7ème jour du mois).
+
+- start_date = f"{year}-{month}-01T00:00:00:000 UTC-00:00" : construit une chaîne de date pour le début du mois en cours, en utilisant l'année, le mois et le jour "01", ainsi qu'une heure, des minutes et des secondes de "00" et des millisecondes de "000". La chaîne est également complétée avec le fuseau horaire UTC.
+
+- end_date = f"{year}-{month}-{day}T23:59:59:999 UTC-00:00" : construit une chaîne de date pour la fin du jour en cours, en utilisant l'année, le mois et le jour en cours, ainsi qu'une heure, des minutes et des secondes de "23", des millisecondes de "999" et le fuseau horaire UTC.
 
 
 
