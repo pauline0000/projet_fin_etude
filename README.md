@@ -176,27 +176,34 @@ L'énumération en cybersécurité est le processus de collecte d'informations s
 Pré-requis : enum4linux, fierce
 
 ### Explication du code -  
+
 ```
-import os
+import subprocess
 
-# Demander à l'utilisateur le nom de domaine ou l'adresse IP cible
-target = input("Entrez le nom de domaine ou l'adresse IP cible : ")
+#Demander l'adresse cible à l'utilisateur
+target = input("Entrez l'adresse cible : ")
 
-# Exécuter les commandes de reconnaissance sur la cible
-print(f"Résultats de la reconnaissance pour {target} :")
-os.system(f"whois {target}")
-os.system(f"nslookup {target}")
-os.system(f"nslookup -query=MX {target}")
-os.system(f"dig {target}")
-os.system(f"dig -t MX {target}")
-os.system(f"nmap -sn {target}")
-os.system(f"nmap -p 21,22,25,80,110,143,161,443 {target}")
-os.system(f"nmap -sV {target}")
-os.system(f"nmap -O {target}")
-os.system(f"nmap -sU -p 123 --open {target}")
-os.system(f"nmap -p 389 {target} && echo 'Le port LDAP est ouvert' || echo 'Le port LDAP est fermé'")
-os.system(f"enum4linux -a {target}")
-os.system(f"fierce --domain {target}")
+#Liste des commandes à exécuter
+commands = [
+f"whois {target}",
+f"nslookup {target}",
+f"nslookup -query=MX {target}",
+f"dig {target}",
+f"dig -t MX {target}",
+f"nmap -sn {target}",
+f"nmap -p 21,22,25,80,110,143,161,443 {target}",
+f"nmap -sV {target}",
+f"nmap -O {target}",
+f"nmap -sU -p 123 --open {target}",
+f"nmap -p 389 {target} && echo 'Le port LDAP est ouvert' || echo 'Le port LDAP est fermé'",
+f"enum4linux -a {target}",
+f"fierce --domain {target}"
+]
+
+#Exécuter chaque commande et afficher le résultat
+for command in commands:
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    print(result.stdout)
 ```
 
 ## 1.4 - Scan de vulnérabilité
@@ -208,6 +215,25 @@ Il s'agit de WPScan. WPScan est un outil open-source de test de sécurité pour 
 
 Au début, j'étais partie sur l'automatisation de Nessus avec son API. Seulement, je n'ai pas réussi à configurer. 
 
+```
+import subprocess
+
+# Demander à l'utilisateur l'URL cible
+url = input("Entrez l'URL cible : ")
+
+# Lancer la commande wpscan avec l'URL cible
+wpscan_command = f"wpscan --url {url}"
+wpscan_result = subprocess.run(wpscan_command, shell=True, capture_output=True, text=True)
+
+# Vérifier si le résultat de wpscan contient le message d'erreur "Scan Aborted: The target is responding with a 403, this might be due to a WAF"
+if "Scan Aborted: The target is responding with a 403, this might be due to a WAF" in wpscan_result.stdout:
+    # Si oui, lancer la commande nikto avec l'URL cible
+    nikto_command = f"nikto -h {url}"
+    subprocess.run(nikto_command, shell=True)
+else:
+    # Si non, afficher le résultat de wpscan
+    print(wpscan_result.stdout)
+```
 
 
 ## 1.5 - Analyse des résultats et exploitation 
