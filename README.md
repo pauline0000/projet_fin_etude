@@ -170,10 +170,6 @@ unicorn_scan()
 
 
 
-
-
-
-
 ## 1.3 - Enumération 
 L'énumération en cybersécurité est le processus de collecte d'informations sur une cible spécifique, comme un système informatique, un réseau, une application, un site web ou même une organisation, dans le but de préparer une attaque ou de vérifier la sécurité de la cible.
 
@@ -246,11 +242,11 @@ else:
     # Si non, afficher le résultat de wpscan
     print(wpscan_result.stdout)
 ```
-- Utilise la bibliothèque Python subprocess pour lancer des commandes dans le terminal
-- Demandé à l'utilisateur l'URL cible qui sera stockée dans la variable cible
-- Utilise la commande wpscan pour effectuer une vérification de sécurité sur le site web
-- Le résultat de la commande wpscan est stocké dans la variable wpscan_result à l'aide de la fonction subprocess.run()
-- Vérifie si le résultat de la commande wpscan contient le message d'erreur "Scan Aborted: The target is responding with a 403, this might be due to a WAF. Si le message d'erreur est présent, le script lance la commande nikto -h sur l'URL cible.
+- Utilise la bibliothèque Python *subprocess* pour lancer des commandes dans le terminal
+- Demandé à l'utilisateur l'URL cible qui sera stockée dans la variable *cible*
+- Utilise la commande *wpscan* pour effectuer une vérification de sécurité sur le site web
+- Le résultat de la commande wpscan est stocké dans la variable *wpscan_result* à l'aide de la fonction subprocess.run()
+- Vérifie si le résultat de la commande wpscan contient le message d'erreur *"Scan Aborted: The target is responding with a 403, this might be due to a WAF"*. Si le message d'erreur est présent, le script lance la commande *nikto -h* sur l'URL cible.
 - Sinon, si le message d'erreur n'est pas présent, le script affiche le résultat de la commande wpscan à l'aide de la fonction print()
 
 ## 1.5 - Analyse des résultats et exploitation 
