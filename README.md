@@ -23,7 +23,7 @@ Nous allons alors nous demander : en quoi est-ce important d’automatiser des a
 
 Nous allons alors commencer par rappeler qu’elles sont les actions d’un analyse Red team. Puis nous allons voir le déroulement de l’automatisation d’un test d’intrusion, le scrapping des 20 dernières vulnérabilités critiques grâce à l'API du site NVD. 
 
-*⚠ Il se peut que pour certaines parties j'aie cloné des outils de Github qui étaient déjà faits, mais c'est seulement parce que l'outil était pertinent et qu'il n'était pas déjà présent sur la VM Kali Linux (sublister, GRecon, Sherlock...). Sinon, dans la plupart du temps j'ai fait appel à des outils qui étaient déjà présents sur la machine Kali.*
+*⚠ Il est possible que j'aie utilisé des outils déjà existants sur Github pour certaines parties, tels que sublister, GRecon et Sherlock, car ces outils étaient pertinents et n'étaient pas disponibles sur la VM Kali Linux. Cependant, pour la plupart des tâches, j'ai utilisé des outils qui étaient déjà présents sur la machine Kali.*
 
 ## **Rappel du contexte : actions d’un analyse Red Team**
 
