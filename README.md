@@ -17,10 +17,10 @@ Il a également été demandé de rendre le code source documenter et aussi d’
 En effet, il nous a été demander pour cette année de rendre un travail sur l’automatisation des actions Red Team d’un analyste SOC. 
 J’ai donc choisi de faire principalement tout mon projet avec le langage Python. En effet, c’est un des langages qui possède une syntaxe assez simple pour coder. De plus, Python possède une grande bibliothèque notamment avec de nombreux modules pour effectuer différentes tâches. Même s’il est vrai que j’avais envie de partir sur des playbook Ansible au début, mais je me suis vite rendu compte que ça n’allait pas être simple. 
 
-J’ai également décider de stocker mes scripts sur une machine Kali Linux (une des dernières versions : 2022.4) en local. Effectivement, l’avantage qu’à la machine Kali Linux, c’est qu’elle offre déjà des outils intéressants concernant les actions Red Team.  
+⚙️ J’ai également décider de stocker mes scripts sur une machine Kali Linux (une des dernières versions : 2022.4) en local. Effectivement, l’avantage qu’à la machine Kali Linux, c’est qu’elle offre déjà des outils intéressants concernant les actions Red Team.  
 
 
-Nous allons alors nous demander : en quoi est-ce important d’automatiser des actions d’un analyse Red Team ?
+:question: Nous allons alors nous demander : en quoi est-ce important d’automatiser des actions d’un analyse Red Team ?
 
 Nous allons alors commencer par rappeler qu’elles sont les actions d’un analyse Red team. Puis nous allons voir le déroulement de l’automatisation d’un test d’intrusion, le scrapping des 20 dernières vulnérabilités critiques grâce à l'API du site NVD. 
 
