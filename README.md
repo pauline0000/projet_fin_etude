@@ -239,7 +239,7 @@ else:
 
 ## 1.5 - Analyse des résultats et exploitation 
 
-Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Cela peut être fait en utilisant des outils d'exploitation tels que Metasploit, Core Impact, etc.
+Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Malheuresement, je n'ai pas eu le temps de réaliser cette partie. De plus, n'ayant pas d'URL de test je considère que cela est complexe. Cependant, de nombreux outils d'exploitation peut être utilisé comme Metasploit par exemple.
 
                                  
                                  
