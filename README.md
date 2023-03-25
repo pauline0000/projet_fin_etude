@@ -112,8 +112,8 @@ Scan de vulnérabilité : Cette étape consiste à utiliser des outils de scan d
 
 Analyse des résultats et exploitation : Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Cela peut être fait en utilisant des outils d'exploitation tels que Metasploit, Core Impact, etc.
 
-                                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+                                 
+                                 
  # 2 - Scrapping des dernières vulnérabilités critiques up-to-date
 
 C’est important pour un analyse Red team d’automatiser le scrapping des dernières vulnérabilités critiques up-to-date, car ça lui permet de gagner du temps. De plus, cela permet d’avoir les dernières vulnérabilités mises à jour en temps réel. 
