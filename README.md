@@ -92,16 +92,13 @@ for host in nm.all_hosts():
                 print('Port : %s\tState : %s' % (port, nm[host][proto][port]['state']))
  ```
 
-1	 	On importe le module nmap avec l’instruction import
-
-2	 	On commence par demander à l’utilisateur d’entrer l’adresse IP à scanner avec le module input(), pour qu’il y ait une interaction. 
-
-3	 	On créer un objet nmap.PortScanner, qui est une classe qui définit le module nmap qu’on a importé plus haut.
-
-4	 	Cette ligne de code utilise la méthode scan de l'objet nmap.PortScanner pour effectuer un scan de ports sur l'adresse IP spécifiée dans la variable target_ip. L'argument -F spécifie que nous souhaitons effectuer un scan de ports rapide.
-5	 	Pour afficher les résultats du scan de ports, on va utiliser une boucle for qui parcourt tous les hôtes scannés (nm.all_hosts()). 
-
-6	 	La liste des ports à afficher est stockée dans la variable port_list. Si le port est ouvert pour le protocole en cours, le code affiche le numéro de port et son état. J’ai choisi de prendre les ports les plus courants. 
+- On importe le module nmap avec l’instruction *import*
+- On commence par demander à l’utilisateur d’entrer l’adresse IP à scanner avec le module *input()*, pour qu’il y ait une interaction. 
+- On créer un objet nmap.PortScanner, qui est une classe qui définit le module *nmap* qu’on a importé plus haut.
+- Cette ligne de code utilise la méthode scan de l'objet *nmap.PortScanner* pour effectuer un scan de ports sur l'adresse IP spécifiée dans la variable *target_ip*.
+- L'argument *-F* spécifie que nous souhaitons effectuer un scan de ports rapide.
+- Pour afficher les résultats du scan de ports, on va utiliser une boucle for qui parcourt tous les hôtes scannés *(nm.all_hosts())*. 
+- La liste des ports à afficher est stockée dans la variable *port_list*. Si le port est ouvert pour le protocole en cours, le code affiche le numéro de port et son état. J’ai choisi de prendre les ports les plus courants. 
 
 ### 1.1.2 - GRecon
 
