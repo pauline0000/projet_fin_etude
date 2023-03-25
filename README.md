@@ -40,9 +40,12 @@ Les membres de la Red Team sont des experts en sécurité informatique, qui util
 
 Ensuite, un analyste de la Red Team est chargé de simuler une attaque d'un adversaire potentiel sur le système d'information de l'organisation. 
 Un analyste de la Red Team peut effectuer plusieurs actions comme la reconnaissance (active et passive) pour obtenir des informations sur l’organisation cible, tels que les noms de domaine, adresses IP, les utilisateurs, les vulnérabilités connues. 
+
 De plus, l'analyste de la Red Team utilise des techniques d'ingénierie sociale pour tromper les employés de l'organisation et obtenir des informations sensibles telles que des mots de passe, des identifiants.
 Il effectue également des tests de vulnérabilité pour identifier les vulnérabilités dans le système de l'organisation, en utilisant des outils d'analyse et d'audit de vulnérabilités automatisés, ainsi que des tests manuels.
+
 De plus, il exploite les vulnérabilités identifiées pour obtenir un accès non autorisé au système de l'organisation.
+
 Enfin, l'analyste de la Red Team prépare un rapport d'analyse détaillant les vulnérabilités identifiées, les méthodes d'attaque utilisées, les données récupérées et les recommandations pour améliorer la sécurité du système.
 
 
