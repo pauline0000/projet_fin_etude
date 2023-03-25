@@ -283,7 +283,7 @@ else:
     except Exception as e:
         print(f"Une erreur s'est produite lors de l'envoi de l'email : {str(e)}")
 ```
-
+Explications du code pour le scraping de vulnérabilités critiques - 
 
                                 
 
