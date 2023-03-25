@@ -188,9 +188,7 @@ Cette étape consiste à analyser les résultats du scan de vulnérabilité pour
 C’est important pour un analyse Red team d’automatiser le scrapping des dernières vulnérabilités critiques up-to-date, car ça lui permet de gagner du temps. De plus, cela permet d’avoir les dernières vulnérabilités mises à jour en temps réel. Le scraping (ou scrapping) est une technique informatique qui consiste à extraire des données d'un site web en les récupérant de manière automatique.
 
 C’est pour cela que j’ai choisi d’intégrer un script en python dans mon menu principal. Il permet d’afficher grâce à l’API du site NVD toutes les dernières vulnérabilités à partir du mois en cours (et à jour) et affiche des informations sur chacune d’entre elles puis exclusivement celles qui ont un impact de type CRITICAL ou HIGH. 
-De plus, j’ai ajouté dans mon script nist5.py, une partie qui permet d’envoyer à l’adresse mail que l’utilisateur à rempli, tous les résultats.  
-
-Explication du script pour récupérer les dernières vulnérabilités (à jour) par mail -
+De plus, j’ai ajouté dans mon script nist6.py, une partie qui permet d’envoyer à l’adresse mail que l’utilisateur à rempli, tous les résultats.  
 
 ```
 import requests
@@ -283,7 +281,7 @@ else:
     except Exception as e:
         print(f"Une erreur s'est produite lors de l'envoi de l'email : {str(e)}")
 ```
-## Explications du code pour le scraping de vulnérabilités critiques - 
+## Explication du script pour récupérer les dernières vulnérabilités (à jour) par mail -
 
                                 
 
