@@ -245,7 +245,7 @@ else:
 
 Cette étape consiste à analyser les résultats du scan de vulnérabilité pour identifier les vulnérabilités et les exploiter pour démontrer l'impact de la vulnérabilité. Malheuresement, je n'ai pas eu le temps de réaliser cette partie. De plus, n'ayant pas d'URL de test je considère que cela est complexe. Cependant, de nombreux outils d'exploitation peut être utilisé comme Metasploit par exemple.
 
-                                 
+Nous allons maintenant passer à la deuxième et dernière action d'un analyste Red Team que j'ai automatisé : le scrapping des dernières vulnérabilités critiques up-to-date. 
                                  
  # 2 - Scrapping des dernières vulnérabilités critiques up-to-date
 
